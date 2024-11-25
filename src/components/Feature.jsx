@@ -10,27 +10,27 @@ export default function Feature() {
           <img
             src="/images/techcrunch.png"
             alt="tech image"
-            className="w-[15%] max-w-[150px] h-auto filter grayscale"
+            className="max-h-[2rem] opacity-[50%] grayscale"
           />
           <img
             src="/images/business-insider.png"
             alt="business image"
-            className="w-[15%] max-w-[150px] h-auto filter grayscale"
+            className="max-h-[2rem] opacity-[50%] grayscale"
           />
           <img
             src="/images/the-new-york-times.png"
             alt="new york image"
-            className="w-[15%] max-w-[150px] h-auto filter grayscale"
+            className="max-h-[2rem] opacity-[50%] grayscale"
           />
           <img
             src="/images/forbes.png"
             alt="forbes image"
-            className="w-[15%] max-w-[150px] h-auto filter grayscale"
+            className="max-h-[2rem] opacity-[50%] grayscale"
           />
           <img
             src="/images/usa-today.png"
             alt="usa image"
-            className="w-[15%] max-w-[150px] h-auto filter grayscale"
+            className="max-h-[2rem] opacity-[50%] grayscale"
           />
         </div>
       </section>

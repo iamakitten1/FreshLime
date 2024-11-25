@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0  w-full h-[5rem] flex justify-between items-center px-11 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-[#e6f2ef]'
+      className={`fixed top-0  w-full h-[5rem]  flex justify-between items-center px-11 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-[#e6f2ef]'
         }`}
     >
       {/* Logo */}
@@ -37,24 +37,24 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="flex  md:gap-[4rem] ">
-        <ul className="flex items-center  md:gap-[3.5rem] text-[1.125rem] font-[700] color:rgb(30 41 59);">
+        <ul className="flex items-center  md:gap-[3.5rem] text-[1.125rem] font-[700] ;">
           <li>
-            <a href="#howItWorks" className="hover:text-[#087f5b] ">
+            <a href="#howItWorks" className="text-[#333] hover:text-[#087f5b] ">
               How it works
             </a>
           </li>
           <li>
-            <a href="#insideUs" className="hover:text-[#087f5b]">
+            <a href="#insideUs" className="text-[#333] hover:text-[#087f5b]">
               Inside us
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="hover:text-[#087f5b]">
+            <a href="#testimonials" className="text-[#333] hover:text-[#087f5b]">
               Testimonials
             </a>
           </li>
           <li>
-            <a href="#pricing" className="hover:text-[#087f5b]">
+            <a href="#pricing" className="text-[#333] hover:text-[#087f5b]">
               Pricing
             </a>
           </li>
