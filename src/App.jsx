@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import Feature from "./components/Feature"
 import Benefits from "./components/Benefits";
-// import InsideUs from "./components/InsideUs";
+import InsideUs from "./components/InsideUs";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import ContactSection from "./components/ContactSection";
@@ -20,7 +20,7 @@ function App() {
       <HeroSection />
       <Feature />
       <Benefits/>
-      {/* <InsideUs /> */}
+      <InsideUs />
       <Testimonials />
       <Pricing />
       <ContactSection />

@@ -7,7 +7,7 @@ export default function Benefits() {
         <p className="text-[#077252] font-[700] text-sm tracking-wider self-start">
           HOW WE WORK
         </p>
-        <h1 className="text-[#333] font-[700] text-5xl  mb-16 tracking-tighter text-left">
+        <h1 className="text-[#333]  font-[700] text-5xl  mb-16 tracking-tighter text-left">
           Our benefits and skills that make u happy
         </h1>
       </div>
