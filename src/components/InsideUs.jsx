@@ -19,7 +19,7 @@ export default function InsideUs() {
 
       <div className='container grid grid-cols-3 margin-bottom-md pl-24  gap-[2rem] justify-center mx-auto mb-[6rem] bg-[255 255 255]'>
         <div className='card-1 flex-1 pt-7 flex flex-col rounded-[0.6875rem] items-center max-w-[20rem] hover:-translate-y-[15px] transition-transform duration-500 '>
-          <img src="/public/images/cardio-img.jpg" alt="Cardio image" className='rounded-t-[0.6875rem] w-full' />
+          <img src="/images/cardio-img.jpg" alt="Cardio image" className='rounded-t-[0.6875rem] w-full' />
 
           <div className='gym-content text-left bg-[#f1eaea] shadow-2xl w-full pb-[15%]  pl-[10%] rounded-b-[0.6875rem]'>
 
@@ -44,7 +44,7 @@ export default function InsideUs() {
         </div>
 
         <div className='card-2 flex-1 pt-7 flex flex-col rounded-[0.6875rem] items-center max-w-[20rem] hover:-translate-y-[15px] transition-transform duration-500'>
-          <img src="/public/images/bars.jpg" alt="Best Bars" className='rounded-t-[0.6875rem] w-full' />
+          <img src="/images/bars.jpg" alt="Best Bars" className='rounded-t-[0.6875rem] w-full' />
           <div className='gym-content text-left bg-[#f1eaea] shadow-2xl w-full  pb-[15%] pl-[10%] rounded-b-[0.6875rem]'>
             <div className='tag-border '>
               <h2 className='tag rounded-full bg-[#94d82d] font-[600] text-[0.8rem] md:text-[0.9rem] w-fit px-2 mt-4'> Heavy Bars</h2>

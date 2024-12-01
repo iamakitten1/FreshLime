@@ -66,22 +66,22 @@ export default function Testimonials() {
         {/* galery */}
         <div className='galery grid grid-cols-3 gap-4 p-6 mt-8'>
           <figure className='galery-img-1 '>
-            <img src="/public/images/gym-1.jpg" alt="" className=' w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
+            <img src="/images/gym-1.jpg" alt="" className=' w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
           <figure className='galery-img-2'>
-            <img src="/public/images/gym-2.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
+            <img src="/images/gym-2.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
           <figure className='galery-img-3'>
-            <img src="/public/images/gym-3.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
+            <img src="/images/gym-3.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
           <figure className='galery-img-4'>
-            <img src="/public/images/gym-4.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
+            <img src="/images/gym-4.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
           <figure className='galery-img-5'>
-            <img src="/public/images/gym-1.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
+            <img src="/images/gym-1.jpg" alt="" className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
           <figure className='galery-img-6'>
-          <img src="/public/images/gym-6.jpg" alt="" className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none" />
+          <img src="/images/gym-6.jpg" alt="" className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none" />
           </figure>
         </div>
       </div>

@@ -115,7 +115,7 @@ export function ContactSection() {
 
       <div className="flex-1 w-full">
         <img
-          src="/public/images/cta-img.jpg"
+          src="/images/cta-img.jpg"
           alt="gym"
           className="w-full h-full object-cover rounded-b-xl lg:rounded-r-xl"
         />
