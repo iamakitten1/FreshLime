@@ -1,78 +1,58 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
+import useSentEmail from "../hooks/useSentEmail";
 
+export function ContactSection() {
+  const { form, sendEmail, isSending } = useSentEmail();
 
-export default function ContactSection() {
-  const formRef = useRef();
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
     user_hear: "",
   });
+  const [isFormValid, setIsFormValid] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData(function (prev) {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
+    validateForm({ ...formData, [name]: value });
   }
 
-  function isFormValid() {
+  function validateForm(data) {
+    const { user_name, user_email, user_hear } = data;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const { user_name, user_email, user_hear } = formData;
-
-    if (
-      user_name.trim() &&
+    const isValid =
+      user_name.trim() !== "" &&
       emailPattern.test(user_email) &&
-      user_hear.trim()
-    ) {
+      user_hear.trim() !== "";
+    setIsFormValid(isValid);
+
+    if (!isValid) {
+      setErrorMessage("Please fill out all fields.");
+    } else {
       setErrorMessage("");
-      return true;
     }
-
-    setErrorMessage("Please fill out all fields correctly.");
-    return false;
-  }
-
-  function sendEmail(event) {
-    event.preventDefault();
-
-    if (!isFormValid()) {
-      return;
-    }
-
-    emailjs
-      .sendForm(
-        "service_7s2hlon",
-        "template_hfgq3up",
-        formRef.current,
-        "wFzPi2R76_p2XCZ28"
-      )
-      .then(
-        function () {
-          alert("Email sent successfully!");
-          setFormData({ user_name: "", user_email: "", user_hear: "" });
-        },
-        function (error) {
-          console.error("Failed to send email:", error.text);
-          alert("Failed to send email. Please try again later.");
-        }
-      );
   }
 
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-r from-[#52a58c] to-[#087f5b] mx-6 lg:mx-20 my-10 lg:my-20 rounded-xl overflow-hidden">
       <div className="flex-1 p-8 sm:p-12 w-full">
-        <p className="font-bold text-3xl sm:text-4xl leading-tight text-white">
+        <p className="font-bold text-3xl sm:text-4xl leading-tight text-[#333}">
           Get your first week for free
         </p>
-        <p className="text-lg sm:text-xl text-white mt-4">
+        <p className="text-lg sm:text-xl text-[#333] mt-4">
           A lot and all kinds of hummers waiting for you. Start working out
           today, make your best shape as possible, stay healthy and active with
           us!
         </p>
         <form
-          ref={formRef}
-          onSubmit={sendEmail}
+          ref={form}
+          onSubmit={(e) => sendEmail(e, formData, setFormData, setIsFormValid)}
           className="flex flex-col gap-4 mt-6"
         >
           <div className="flex flex-col sm:flex-row sm:gap-6 w-full">
@@ -81,6 +61,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 name="user_name"
+                placeholder="Mark Godwin"
                 value={formData.user_name}
                 onChange={handleChange}
                 className="bg-[#b5d9ce] rounded-lg p-2"
@@ -92,6 +73,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 name="user_email"
+                placeholder="me@example.com"
                 value={formData.user_email}
                 onChange={handleChange}
                 className="bg-[#b5d9ce] rounded-lg p-2"
@@ -119,10 +101,10 @@ export default function ContactSection() {
             </div>
             <button
               type="submit"
-              disabled={!isFormValid()}
-              className="bg-[#02261b] px-6 py-3 text-white text-[1.2rem] flex-1  rounded-lg sm:w-auto mt-4 sm:mt-0"
+              disabled={!isFormValid || isSending}
+              className="bg-[#02261b] px-6 py-3 text-white text-[1.2rem] flex-1 rounded-lg sm:w-auto mt-4 sm:mt-0"
             >
-              Sign up now
+              {isSending ? "Sending..." : "Sign up now"}
             </button>
           </div>
           {errorMessage && (
@@ -133,7 +115,7 @@ export default function ContactSection() {
 
       <div className="flex-1 w-full">
         <img
-          src="/public/images/gym.jpg"
+          src="/public/images/cta-img.jpg"
           alt="gym"
           className="w-full h-full object-cover rounded-b-xl lg:rounded-r-xl"
         />
@@ -142,3 +124,4 @@ export default function ContactSection() {
   );
 }
 
+export default ContactSection;

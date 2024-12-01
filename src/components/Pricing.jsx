@@ -96,7 +96,7 @@ export default function Pricing() {
         </div>
       </div>
 
-      <p className="text-center mt-12 text-base lg:text-lg mb-12 text-[#333]">
+      <p className="text-center mt-12 text-base lg:text-lg mb-12 font-sanstext-[#333]">
         Prices include all applicable taxes. You can cancel at any time. Both
         plans include the following:
       </p>
@@ -113,7 +113,7 @@ export default function Pricing() {
           </p>
         </div>
         <div className="flex flex-col items-center text-center space-y-4">
-          <div className="rounded-full bg-[#b5d9ce] p-4">
+          <div className="rounded-full bg-[#94d82] p-4">
             <IoRocketOutline className="text-[#087f5b] h-8 w-8" />
           </div>
           <p className="font-bold text-lg">Natural and organic</p>

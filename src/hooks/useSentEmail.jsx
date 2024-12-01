@@ -1,62 +1,44 @@
-const form = useRef();
-  const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
-    user_hear: "",
-  });
-  const [isFormValid, setIsFormValid] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    validateForm({ ...formData, [name]: value });
-  };
+function useSentEmail() {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
 
-  const validateForm = (data) => {
-    const { user_name, user_email, user_hear } = data;
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const isValid =
-      user_name.trim() !== "" &&
-      emailPattern.test(user_email) &&
-      user_hear.trim() !== "";
-    setIsFormValid(isValid);
-
-    if (!isValid) {
-      setErrorMessage("Please fill out all fields.");
-    } else {
-      setErrorMessage("");
-    }
-  };
-
-  const sendEmail = (e) => {
+  function sendEmail(e, formData, setFormData, setIsFormValid) {
     e.preventDefault();
+    console.log(form.current);
 
-    if (!isFormValid) {
-      return;
-    }
+    setIsSending(true);
+
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 
     emailjs
-      .sendForm(
-        "service_7s2hlon",
-        "template_hfgq3up",
-        form.current,
-        "wFzPi2R76_p2XCZ28"
-      )
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(
-        () => {
-          console.log("SUCCESS!");
+        function () {
+          console.log("Email sent successfully!");
           alert("Email sent successfully!");
           e.target.reset();
           setFormData({ user_name: "", user_email: "", user_hear: "" });
           setIsFormValid(false);
         },
-        (error) => {
-          console.log("FAILED...", error.text);
+        function (error) {
+          console.error("Failed to send email. Please try again", error.text);
           alert("Failed to send email. Please try again later.");
         }
-      );
-  };
+      )
+      .finally(function () {
+        setIsSending(false);
+      });
+  }
+
+  return { form, sendEmail, isSending };
+}
+
+export default useSentEmail;
+
+
