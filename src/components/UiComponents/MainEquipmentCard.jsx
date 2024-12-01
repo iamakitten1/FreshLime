@@ -1,14 +1,14 @@
-export default function MainEquipmentCard({ image, features, highlightTitle, cardTitle }) {
-  return (
-    <div>
-      <EquipmentCard
-        img={image}
-        dataObj={features}
-        greenTiTle={highlightTitle}
-        title={cardTitle}
-      />
-    </div>
-  );
-}
+// export default function MainEquipmentCard({ image, features, highlightTitle, cardTitle }) {
+//   return (
+//     <div>
+//       <EgiquipmentCard
+//         img={image}
+//         dataObj={features}
+//         greenTiTle={highlightTitle}
+//         title={cardTitle}
+//       />
+//     </div>
+//   );
+// }
 
 
