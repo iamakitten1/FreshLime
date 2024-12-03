@@ -4,12 +4,12 @@ export default function Testimonials() {
   return (
     <div className='testimonial-container bg-[#e6f2ef] '>
       {/* head */}
-      <div>
-        <span className='head text-[#077252] font-semibold text-[1.4rem] md:text-[1.6rem] uppercase mt-8'> how we work</span>
-        <h2 className='second-head font-bold text-[2rem] text-[#333] md:text-[3rem] mb-4 md:mb-8'> Our benefits and skills  <br/> that make u happy </h2>
+      <div className='flex flex-col '>
+        <span className='head ml-20 mt-8 text-[#077252] font-semibold text-[1.4rem] md:text-[1.6rem] uppercase '> how we work</span>
+        <h2 className='second-head ml-20   font-bold text-[2rem] text-[#333] md:text-[3rem] mb-4 md:mb-8'> Our benefits and skills  <br/> that make u happy </h2>
       </div>
       {/* content */}
-      <div className='content  flex flex-col md:flex-row justify-center items-center pt-20 px-4 md:px-8 lg:px-12'>
+      <div className='content  flex flex-col md:flex-row justify-center items-center  px-4 md:px-8 lg:px-12'>
 
         {/* testimolianls */}
         <div className='testimonials grid grid-cols-2 gap-6'>
@@ -64,7 +64,7 @@ export default function Testimonials() {
 
 
         {/* galery */}
-        <div className='galery grid grid-cols-3 gap-4 p-6 mt-8'>
+        <div className='galery grid grid-cols-3 gap-4 p-6 '>
           <figure className='galery-img-1 '>
             <img src="/images/gym-1.jpg" alt="" className=' w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-full md:h-auto transition-transform rounded-2xl duration-500 ease-in-out hover:scale-105 hover:rounded-none' />
           </figure>
