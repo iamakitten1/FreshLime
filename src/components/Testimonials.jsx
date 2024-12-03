@@ -15,7 +15,7 @@ export default function Testimonials() {
         <div className='testimonials grid grid-cols-2 gap-6'>
           {/* each testimonial */}
           <figure className='testimonial-1'>
-            <img src="/public/images/customer-1.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
+            <img src="/images/customer-1.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
             <blockquote className='coment text-[#333]'>
               " Hi there lola here, I never liked gym before. I am lazy
               hahahaha, but in Fresh Lime you just can't be lazy, wanna work
@@ -25,7 +25,7 @@ export default function Testimonials() {
             <span className='name text-[#333]'>— Lola Lee </span>
           </figure>
           <figure className='testimonial-2'>
-            <img src="/public/images/customer-2.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
+            <img src="/images/customer-2.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
             <blockquote className='coment text-[#333]'>
               "
               I'm from Maldives and I never seen Gym like Fresh Lime, love
@@ -36,7 +36,7 @@ export default function Testimonials() {
             <span className='name text-[#333]'>— Marcus Stanford </span>
           </figure>
           <figure className='testimonial-3'>
-            <img src="/public/images/customer-3.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
+            <img src="/images/customer-3.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
             <blockquote className='coment text-[#333]'>
               "
               In Fresh Lime I'm feeling like home, best stuff, amazing
@@ -47,7 +47,7 @@ export default function Testimonials() {
             <span className='name text-[#333]'>— Marta Hansen </span>
           </figure>
           <figure className='testimonial-4'>
-            <img src="/public/images/customer-4.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
+            <img src="/images/customer-4.jpg" alt="Customer image" className='img rounded-full w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 ' />
             <blockquote className='coment text-[#333]'>
               "
               When I started I was skinny, Now I'm like mountain. Every single
